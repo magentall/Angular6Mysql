@@ -6,6 +6,8 @@ import { FormsModule } from '@angular/forms'
 import { AppComponent } from './app.component';
 import { HelloComponent } from './hello/hello.component';
 
+import { HttpClientModule } from '@angular/common/http'
+
 import { RecordsService } from './records.service'
 
 
@@ -16,7 +18,8 @@ import { RecordsService } from './records.service'
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [RecordsService],
   bootstrap: [AppComponent]

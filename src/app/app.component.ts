@@ -29,10 +29,9 @@ class myExampleClass {
     console.log("cstr fired")
   }
 }
-
-
-
 const myClass = new myExampleClass(5, 10 */
+
+
 
 @Component({
   selector: 'app-root',
@@ -77,7 +76,10 @@ export class AppComponent {
     }
 
   ngOnInit(){
-    this.rec = this.myFirstService.getData()
+    this.myFirstService.getData().subscribe(data =>{
+          console.log("we got", data.obj)
+          this.rec = data.obj
+        })
   }
 
 
