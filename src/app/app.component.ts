@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 
+
 /*
 function log(target, name, descriptor){
   console.log(target, name, descriptor)
@@ -39,10 +40,20 @@ const myClass = new myExampleClass(5, 10 */
 })
 export class AppComponent {
   title = 'app';
+  text = ' var text'
+  text2 = "mgt"
   myVariable = 'ytyt'
   myVariable2 = 55
   myDisabledValue = false
   myDisabV = false
+
+  updateValue(e){
+    this.text=e.target.value
+    console.log(e.target.value)
+  }
+
+
+
   constructor(){
     console.log("constructor", this.aSimpleMethod(5, 2))
    this.myVariable = ""
