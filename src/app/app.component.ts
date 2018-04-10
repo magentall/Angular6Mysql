@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { RecordsService } from './records.service'
 
 
 /*
@@ -36,7 +37,7 @@ const myClass = new myExampleClass(5, 10 */
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.sass']
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent {
   title = 'app';
@@ -47,13 +48,46 @@ export class AppComponent {
   myDisabledValue = false
   myDisabV = false
 
+  records = [
+    {
+      name: 'Sizze',
+      online: true
+    },
+    {
+      name: 'SizzA',
+      online: false
+    },
+    {
+      name: 'SA',
+      online: true
+    }
+  ]
+
+    rec = {}
+// one constructor only
+    constructor(private myFirstService : RecordsService) {
+    //the follow not use for the record service
+      console.log("constructor", this.aSimpleMethod(5, 2))
+     this.myVariable = ""
+      this.myDisabledValue = false
+      setInterval(() => {
+         this.myVariable = Math.random().toString()
+         this.myDisabledValue = Math.random() > 0.5
+       },500)
+    }
+
+  ngOnInit(){
+    this.rec = this.myFirstService.getData()
+  }
+
+
   updateValue(e){
     this.text=e.target.value
     console.log(e.target.value)
   }
 
 
-
+/*
   constructor(){
     console.log("constructor", this.aSimpleMethod(5, 2))
    this.myVariable = ""
@@ -64,6 +98,7 @@ export class AppComponent {
      },500)
 
   }
+  */
   callMyFunction() {
     this.myDisabV=!this.myDisabV
     console.log("fct called")

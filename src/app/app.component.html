@@ -6,9 +6,55 @@
 {{text2}}
 
 
+<table>
+    <tr>
+      <td>
+        S No.
+      </td>
+      <td>
+        name
+      </td>
+      <td>
+        is onlmine
+      </td>
+    </tr>
+    <tr *ngFor= "let record of records; let myIndex = index; let firstRecord = first; let lastRecord = last; let evenRecord = even; let oddRecord = odd;" [ngClass]="{odd: oddRecord, even: evenRecord, first: firstRecord, last: lastRecord}">
+      <td>
+        {{myIndex + 1}}
+      </td>
+      <td>
+        {{record.name}}
+      </td>
+      <td>
+        {{record.online}}
+      </td>
+    </tr>
+</table>
 
-
-
+<table>
+    <tr>
+      <td>
+        S No.
+      </td>
+      <td>
+        name
+      </td>
+      <td>
+        is onlmine
+      </td>
+    </tr>
+    <tr *ngFor= "let recz of rec; let myInd = index; let firstRecord = first; let lastRecord = last; let evenRecord = even; let oddRecord = odd;" [ngClass]="{odd: oddRecord, even: evenRecord, first: firstRecord, last: lastRecord}">
+      <td>
+        {{myInd + 1}}
+      </td>
+      <td>
+        {{recz.name}}
+      </td>
+      <td>
+        {{recz.online}}
+      </td>
+    </tr>
+</table>
 
 
 
