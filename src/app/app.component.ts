@@ -62,7 +62,7 @@ export class AppComponent {
     }
   ]
 
-    rec = {}
+    rec = []
 // one constructor only
     constructor(private myFirstService : RecordsService) {
     //the follow not use for the record service

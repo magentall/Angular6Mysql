@@ -1,0 +1,32 @@
+<p>
+  data works!
+  <a routerLink="/">Home Page</a>
+
+
+
+
+</p>
+<table>
+    <tr>
+      <td>s
+        S No.
+      </td>
+      <td>
+        name
+      </td>
+      <td>
+        is onlmine
+      </td>
+    </tr>
+    <tr *ngFor= "let recz of rec; let myInd = index; let firstRecord = first; let lastRecord = last; let evenRecord = even; let oddRecord = odd;" [ngClass]="{odd: oddRecord, even: evenRecord, first: firstRecord, last: lastRecord}">
+      <td>
+        {{myInd + 1}}
+      </td>
+      <td>
+        {{recz.name}}
+      </td>
+      <td>
+        {{recz.online}}
+      </td>
+    </tr>
+</table>

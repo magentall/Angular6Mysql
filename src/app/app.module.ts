@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { RouterModule } from '@angular/router'
 import { FormsModule } from '@angular/forms'
 
 
@@ -8,18 +9,32 @@ import { HelloComponent } from './hello/hello.component';
 
 import { HttpClientModule } from '@angular/common/http'
 
-import { RecordsService } from './records.service'
+import { RecordsService } from './records.service';
+import { HomeComponent } from './home/home.component';
+import { DataComponent } from './data/data.component'
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    HelloComponent
+    HelloComponent,
+    HomeComponent,
+    DataComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule.forRoot([
+      {
+        path:'data',
+        component: DataComponent
+      },
+      {
+        path:'',
+        component:HomeComponent
+      }
+    ])
   ],
   providers: [RecordsService],
   bootstrap: [AppComponent]
