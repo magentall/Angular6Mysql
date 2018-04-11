@@ -6,6 +6,7 @@ import { RecordsService } from '../records.service'
   templateUrl: './data.component.html',
   styleUrls: ['./data.component.sass']
 })
+
 export class DataComponent implements OnInit {
 
   rec = []
@@ -18,4 +19,5 @@ export class DataComponent implements OnInit {
           this.rec = data.obj
   }
 
+}
 }

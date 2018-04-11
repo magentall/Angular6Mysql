@@ -6,7 +6,7 @@ header('Content-Type: application/json')
  "obj":
 [
   {
-    "name": "Sizzer",
+    "name": "Sizzeraaaa",
     "online": true
   },
   {
