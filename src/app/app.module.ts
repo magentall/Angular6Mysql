@@ -16,6 +16,7 @@ import { DataComponent } from './data/data.component';
 import { LoginComponent } from './login/login.component';
 import { AdminComponent } from './admin/admin.component'
 import { AuthGuard } from './auth.guard'
+import { UserService } from './user.service'
 
 
 @NgModule({
@@ -51,7 +52,7 @@ import { AuthGuard } from './auth.guard'
       }
     ])
   ],
-  providers: [RecordsService, AuthService, AuthGuard],
+  providers: [RecordsService, AuthService, AuthGuard, UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
