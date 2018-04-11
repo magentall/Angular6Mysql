@@ -1,5 +1,5 @@
 <?php
-session _start();
+session_start();
 
 if (isset($_SESSION['user'])) {
     echo '{"status": true}';

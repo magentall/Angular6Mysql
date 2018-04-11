@@ -10,7 +10,7 @@ if ($user == 'admin') {
   }';
 } else {
   echo '{
-    "message": 'whoiii nope',
+    "message": "whoiii nope",
     "success": false
   }';
 }
