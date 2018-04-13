@@ -18,6 +18,6 @@ export class DataComponent implements OnInit {
     this.myFirstService.getData().subscribe(data =>{
           console.log("we got gg", data.obj)
           this.rec = data.obj
-          }
+          })
         }
 }
