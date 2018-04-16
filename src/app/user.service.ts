@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http'
-import { observable } from 'rxjs/Observable';
+import { Observable } from 'rxjs/Observable';
 
 interface myData {
   message: string,
