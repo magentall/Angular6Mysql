@@ -3,6 +3,9 @@ php -S localhost:1234
 npm i
 npm start
 
+check package json for ur config and also the proxyconfig.json
+ "start": "ng serve --proxy-config proxyconfig.json --host 149.202.52.208 --port 58001 &",
+
 # Ag6
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.3.
