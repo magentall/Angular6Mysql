@@ -1,4 +1,7 @@
 sudo chown -R mgt:mgt /directory
+php -S localhost:1234
+npm i
+npm start
 
 # Ag6
 
