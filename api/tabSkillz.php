@@ -4,12 +4,12 @@ header("Content-Type: application/json");
 
 //$conn = new mysqli("localhost", "root", "80146599C6", "stephane_bdcv");
 
-$conn = new mysqli("localhost", "root", "BoomBoom11**", "ctdje");
+$conn = new mysqli("localhost", "root", "", "ctdje");
 
 $result = $conn->query("SELECT * FROM jeux");
 
 $rows=[];
-$outp = "";
+//$outp = "";
 while($rs = $result->fetch_array(MYSQLI_ASSOC)) {
 	$rows[]=$rs;
 

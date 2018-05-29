@@ -4,6 +4,8 @@ import { Observable } from 'rxjs/Observable';
 
 interface myData {
   message: string,
+  message2: string,
+  obj: Array<Object>
   success: boolean
 }
 

@@ -2,7 +2,9 @@
 
 function req($query){
   $conn = new mysqli("localhost", "root", "", "ctdje");
-  return $conn->query($query);
+  $result = $conn->query($query);
+  $conn->close();
+  return $result;
 }
 
 ?>
