@@ -1,31 +1,49 @@
-<p> {{message}} </p>
 
-<p> {{message2}} </p>
+    <p> {{message}} <a routerLink="/logout">Logout</a></p>
 
-<a routerLink="/logout">Logout</a>
+    <p> {{message2}} </p>
 
-jeux en prêts
-<table>
-    <tr>
-      <td>s
-        S No.
-      </td>
-      <td>
-        nom du jeu
-      </td>
-      <td>
-        date de retour
-      </td>
-    </tr>
-    <tr *ngFor= "let recz of tabjeu; let myInd = index; let firstRecord = first; let lastRecord = last; let evenRecord = even; let oddRecord = odd;" [ngClass]="{odd: oddRecord, even: evenRecord, first: firstRecord, last: lastRecord}">
-      <td>
-        {{myInd + 1}}
-      </td>
-      <td>
-        {{recz.nom_jeu}}
-      </td>
-      <td>
-        {{recz.date_retour}}
-      </td>
-    </tr>
-</table>
+    jeux en prêts
+
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Nom du Jeu</th>
+          <th scope="col">Date de retour</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor= "let recz of tabjeu; let myInd = index">
+          <th scope="row">{{myInd + 1}}</th>
+          <td>{{recz.nom_jeu}}</td>
+          <td>{{recz.date_retour}}</td>
+        </tr>
+      </tbody>
+    </table>
+<!--
+    <table>
+        <tr>
+          <td>s
+            S No.
+          </td>
+          <td>
+            nom du jeu
+          </td>
+          <td>
+            date de retour
+          </td>
+        </tr>
+        <tr *ngFor= "let recz of tabjeu; let myInd = index; let firstRecord = first; let lastRecord = last; let evenRecord = even; let oddRecord = odd;" [ngClass]="{odd: oddRecord, even: evenRecord, first: firstRecord, last: lastRecord}">
+          <td>
+            {{myInd + 1}}
+          </td>
+          <td>
+            {{recz.nom_jeu}}
+          </td>
+          <td>
+            {{recz.date_retour}}
+          </td>
+        </tr>
+    </table>
+-->
