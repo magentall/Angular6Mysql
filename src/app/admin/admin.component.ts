@@ -8,6 +8,7 @@ import { UserService } from '../user.service'
 })
 export class AdminComponent implements OnInit {
   message = " Loading.... "
+  message2 = ""
   tabjeu = []
   constructor(private user: UserService) { }
 
