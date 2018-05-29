@@ -12,8 +12,8 @@ export class RecordsService {
 
   getData() {
   // return this.http.get<myData>('api/file.php')
-	   return this.http.get<myData>('api/tabSkillz.php')
-    //return this.http.get<myData>('stz/trash/temp/0024htm/tabSkillz.php')	
+	   return this.http.get<myData>('api/tabdispo.php')
+    //return this.http.get<myData>('stz/trash/temp/0024htm/tabSkillz.php')
 
   }
 
