@@ -7,9 +7,9 @@ header("Content-Type: application/json");
 $conn = new mysqli("localhost", "root", "", "ctdje");
 
 $result = $conn->query("SELECT * FROM jeux");
-
-$rows=[];
 //$outp = "";
+$rows=[];
+
 while($rs = $result->fetch_array(MYSQLI_ASSOC)) {
 	$rows[]=$rs;
 
