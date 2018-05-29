@@ -12,10 +12,10 @@
         S No.
       </td>
       <td>
-        name
+        nom du jeu
       </td>
       <td>
-        is onlmine
+        nom de catégorie
       </td>
     </tr>
     <tr *ngFor= "let recz of rec; let myInd = index; let firstRecord = first; let lastRecord = last; let evenRecord = even; let oddRecord = odd;" [ngClass]="{odd: oddRecord, even: evenRecord, first: firstRecord, last: lastRecord}">
@@ -23,10 +23,10 @@
         {{myInd + 1}}
       </td>
       <td>
-        {{recz.skill}}
+        {{recz.nom_jeu}}
       </td>
       <td>
-        {{recz.level}}
+        {{recz.nom_categorie}}
       </td>
     </tr>
 </table>

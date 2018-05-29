@@ -24,7 +24,7 @@ export class AuthService {
   }
 
   getUserDetails(username, password) {
-    return this.http.post<myData>('/api/auth.php', {
+    return this.http.post<myData>('/api/auth-bd-lt.php', {
       username,
       password
     })/*.subscribe(data => {
