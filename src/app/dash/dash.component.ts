@@ -8,9 +8,18 @@ import { UserService } from '../user.service'
 })
 export class DashComponent implements OnInit {
 
+  tab1 =[]
+
   constructor(private user: UserService) { }
 
   ngOnInit() {
+    this.user.getListPrets().subscribe(data => {
+//      this.message = data.message
+      this.tab1 = data.obj
+      if(!data.success){
+        localStorage.removeItem('loggedIn')
+      }
+    })
   }
 
 }

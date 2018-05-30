@@ -9,6 +9,11 @@ interface myData {
   success: boolean
 }
 
+interface myData2 {
+  obj: Array<Object>
+  success: boolean
+}
+
 interface isLoggedIn {
   status: boolean
 }
@@ -34,23 +39,23 @@ export class UserService {
     return this.http.get<logoutStatus>('/api/logout.php')
   }
 
-  getListPrets(date_debut,date_fin) {
-    return this.http.get<myData>('/api/listprets.php')
+  getListPrets() {
+    return this.http.get<myData2>('/api/listprets.php')
   }
 
   ajoutAdherent(noms,alias,key) {
-    return this.http.get<myData>('/api/addad.php')
+    return this.http.get<myData2>('/api/addad.php')
   }
 
   getListJeux() {
-    return this.http.get<myData>('/api/jeux.php')
+    return this.http.get<myData2>('/api/jeux.php')
   }
 
   getListCat() {
-    return this.http.get<myData>('/api/cat.php')
+    return this.http.get<myData2>('/api/cat.php')
   }
 
   getListSurCat() {
-    return this.http.get<myData>('/api/surcat.php')
+    return this.http.get<myData2>('/api/surcat.php')
   }
 }

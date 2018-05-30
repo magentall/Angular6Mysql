@@ -5,6 +5,11 @@ npm start
 
 add & to keep it running on server only for :1234 & for dev mode -> as u wish :)
 
+to stop php process
+pgrep php
+
+kill -9 2322 (ur process id)
+
 check package json for ur config and also the proxyconfig.json
  "start": "ng serve --proxy-config proxyconfig.json --host 149.202.52.208 --port 58001 &",
 
