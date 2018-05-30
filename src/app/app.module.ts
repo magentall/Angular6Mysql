@@ -54,7 +54,7 @@ import { DashComponent } from './dash/dash.component'
         component: LogoutComponent
       },
       {
-        path:'prets',
+        path:'admin',
         component: AdminComponent,
         canActivate: [AuthGuard]
       }
