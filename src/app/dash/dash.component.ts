@@ -16,7 +16,7 @@ export class DashComponent implements OnInit {
     this.user.getListPrets().subscribe(data2 => {
       this.tabprets = data2.obj
       if(!data2.success){
-        //localStorage.removeItem('loggedIn')
+        localStorage.removeItem('loggedIn')
       }
     })
   }

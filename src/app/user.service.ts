@@ -42,14 +42,9 @@ export class UserService {
   getListPrets() {
     return this.http.get<myData2>('/api/listprets.php')
   }
-/*
+
   ajoutAdherent(noms,alias,key) {
     return this.http.get<myData2>('/api/addad.php')
-  }
-
-// of today
-  getListJeux() {
-    return this.http.get<myData2>('/api/jeux.php')
   }
 
   getListCat() {
@@ -58,5 +53,5 @@ export class UserService {
 
   getListSurCat() {
     return this.http.get<myData2>('/api/surcat.php')
-  }*/
+  }
 }

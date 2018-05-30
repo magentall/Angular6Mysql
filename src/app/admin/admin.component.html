@@ -1,9 +1,9 @@
 
-    <p> {{message}} <a routerLink="/logout">Logout</a></p>
+    <h3> {{message}} <a routerLink="/logout">Logout</a></h3>
 
-    <p> {{message2}} </p>
+    <h4> {{message2}} </h4>
 
-    jeux en prêts
+    <h3>jeux en prêts</h3>
 
     <table class="table table-striped">
       <thead>
@@ -21,29 +21,3 @@
         </tr>
       </tbody>
     </table>
-<!--
-    <table>
-        <tr>
-          <td>s
-            S No.
-          </td>
-          <td>
-            nom du jeu
-          </td>
-          <td>
-            date de retour
-          </td>
-        </tr>
-        <tr *ngFor= "let recz of tabjeu; let myInd = index; let firstRecord = first; let lastRecord = last; let evenRecord = even; let oddRecord = odd;" [ngClass]="{odd: oddRecord, even: evenRecord, first: firstRecord, last: lastRecord}">
-          <td>
-            {{myInd + 1}}
-          </td>
-          <td>
-            {{recz.nom_jeu}}
-          </td>
-          <td>
-            {{recz.date_retour}}
-          </td>
-        </tr>
-    </table>
--->

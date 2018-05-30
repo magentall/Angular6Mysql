@@ -17,9 +17,9 @@ function log(target, name, descriptor){
 }*/
 
 function log(className){
-  console.log(className)
+  //console.log(className)
   return (...args) => {
-    console.log("args", args)
+    //console.log("args", args)
     return new className(...args)
   }
 }
@@ -67,7 +67,7 @@ export class AppComponent {
 // one constructor only
     constructor(private myFirstService : RecordsService) {
     //the follow not use for the record service
-      console.log("constructor", this.aSimpleMethod(5, 2))
+    //  console.log("constructor", this.aSimpleMethod(5, 2))
      this.myVariable = ""
       this.myDisabledValue = false
       setInterval(() => {
@@ -78,7 +78,7 @@ export class AppComponent {
 
   ngOnInit(){
     this.myFirstService.getData().subscribe(data =>{
-          console.log("we got", data.obj)
+        //  console.log("we got", data.obj)
           this.rec = data.obj
         })
   }
@@ -86,7 +86,7 @@ export class AppComponent {
 
   updateValue(e){
     this.text=e.target.value
-    console.log(e.target.value)
+  //  console.log(e.target.value)
   }
 
 
@@ -104,13 +104,13 @@ export class AppComponent {
   */
   callMyFunction() {
     this.myDisabV=!this.myDisabV
-    console.log("fct called")
+  //  console.log("fct called")
   }
 
 
 //  @log
   aSimpleMethod(a, b){
-    console.log("heyyheyyy")
+//    console.log("heyyheyyy")
     return a*b
   }
 }
