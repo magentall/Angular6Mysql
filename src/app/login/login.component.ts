@@ -29,7 +29,7 @@ export class LoginComponent implements OnInit {
     }
     })
 
-    console.log(username, password)
+    //console.log(username, password)
   }
 
 }

@@ -19,6 +19,12 @@ $tabjeu=[];
 $result = req("SELECT * FROM jeux INNER JOIN prets ON jeux.num_jeu=prets.num_jeu WHERE prets.date_pret<= '$today' AND '$today' <= prets.date_retour AND prets.num_adherent=$num_adherent");
 $tabjeu=res2json($result);
 
+date_default_timezone_set('Europe/Paris');
+// --- La setlocale() fonctionnne pour strftime mais pas pour DateTime->format()
+setlocale(LC_TIME, 'fr_FR.utf8','fra');// OK
+// strftime("jourEnLettres jour moisEnLettres annee") de la date courante
+$today=strftime("%A %d %B %Y");
+
 echo '{
   "message": "Bienvenue '.$user.' ",
   "message2": "'.$today.'",
