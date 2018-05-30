@@ -59,7 +59,7 @@ import { DashComponent } from './dash/dash.component'
         canActivate: [AuthGuard]
       },
       {
-        path:'dash',
+        path:'dash87675',
         component: DashComponent,
         canActivate: [AuthGuard]
       }

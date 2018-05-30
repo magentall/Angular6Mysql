@@ -23,7 +23,7 @@ export class LoginComponent implements OnInit {
       if(data.success){
         // redir to /admin
         if(username=="supuz"){
-          this.router.navigate(['dash'])
+          this.router.navigate(['dash87675'])
           this.Auth.setLoggedIn(true)
         }
         else{
