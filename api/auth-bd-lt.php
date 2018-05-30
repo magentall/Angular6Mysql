@@ -5,7 +5,7 @@ include 'inc/req.php';
 session_start();
 
 $_POST = json_decode(file_get_contents('php://input'), true);
-if (isset($_POST)&& !empty($_POST)){
+if (isset($_POST)&& !empty($_POST)&&$_POST['password']!=""){
   $username = $_POST['username'];
   $password = $_POST['password'];
 
@@ -30,7 +30,7 @@ if (isset($_POST)&& !empty($_POST)){
    ?>
 {
   "success": false,
-  "message": "Saisie incorrecte"
+  "message": "Votre saisie est incorrecte."
 }
    <?php
  }
@@ -39,7 +39,7 @@ if (isset($_POST)&& !empty($_POST)){
   ?>
 {
   "success": false,
-  "message": "Only post access accepted"
+  "message": "Votre saisie est incorrecte!"
 }
   <?php
 }
