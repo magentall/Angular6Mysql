@@ -3,6 +3,8 @@ php -S localhost:1234
 npm i
 npm start
 
+add & to keep it running on server only for :1234 & for dev mode -> as u wish :)
+
 check package json for ur config and also the proxyconfig.json
  "start": "ng serve --proxy-config proxyconfig.json --host 149.202.52.208 --port 58001 &",
 
