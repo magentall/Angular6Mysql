@@ -57,6 +57,11 @@ import { DashComponent } from './dash/dash.component'
         path:'admin',
         component: AdminComponent,
         canActivate: [AuthGuard]
+      },
+      {
+        path:'dash',
+        component: DashComponent,
+        canActivate: [AuthGuard]
       }
     ])
   ],

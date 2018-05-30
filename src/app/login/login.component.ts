@@ -22,8 +22,14 @@ export class LoginComponent implements OnInit {
     this.Auth.getUserDetails(username, password).subscribe(data => {
       if(data.success){
         // redir to /admin
-        this.router.navigate(['admin'])
-        this.Auth.setLoggedIn(true)
+        if(username=="supuz"){
+          this.router.navigate(['dash'])
+          this.Auth.setLoggedIn(true)
+        }
+        else{
+          this.router.navigate(['admin'])
+          this.Auth.setLoggedIn(true)
+        }
       } else {
       window.alert(data.message)
     }
