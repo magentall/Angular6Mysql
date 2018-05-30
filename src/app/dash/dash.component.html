@@ -1,3 +1,19 @@
 <p>
-  dash works!  <a routerLink="/logout">Logout</a>
+  DashBoard  <a routerLink="/logout">Logout</a>
 </p>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Nom du Jeu</th>
+      <th scope="col">Date de retour</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor= "let recz of tabprets; let myInd = index">
+      <th scope="row">{{myInd + 1}}</th>
+      <td>{{recz.nom_jeu}}</td>
+      <td>{{recz.date_retour}} (Année Mois Jour)</td>
+    </tr>
+  </tbody>
+</table>

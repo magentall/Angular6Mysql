@@ -29,7 +29,7 @@ echo '{
   "message": "Bienvenue '.$user.' ",
   "message2": "'.$today.'",
   "obj": '.$tabjeu.',
-  "succes": true
+  "success": true
 }';
 
  ?>

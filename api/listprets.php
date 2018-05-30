@@ -4,10 +4,19 @@ include 'inc/req.php';
 include 'inc/func.php';
 
 $today=date("Y-m-d");
+$today= strtotime($today);
+$datstart = date("Y-m-d", strtotime("-1 month", $today));
+$datend = date("Y-m-d", strtotime("+1 month", $today));
 
-$result = req("SELECT jeux.num_jeu, jeux.nom_jeu, jeux.nom_categorie, categorie.nom_surcat FROM jeux INNER JOIN categorie ON jeux.nom_categorie=categorie.nom_categorie LEFT JOIN prets ON jeux.num_jeu = prets.num_jeu WHERE prets.num_jeu IS NULL OR '$today' >= prets.date_retour ORDER BY categorie.nom_surcat DESC");
+//$time = strtotime("2010.12.11");
 
-$outp = res2json_only($result);
 
-echo($outp);
+$result = req("SELECT date_pret, date_retour, nom_jeu, nom_categorie, prets.num_adherent, adherents.alias, adherents.noms_adherent FROM prets INNER JOIN jeux ON  jeux.num_jeu=prets.num_jeu INNER JOIN adherents ON prets.num_adherent=adherents.num_adherent WHERE (prets.date_pret>= '$datstart' AND '$datend' >= prets.date_pret) OR (prets.date_retour<= '$datend' AND '$datstart' <= prets.date_retour) ");
+$tab=res2json($result);
+
+
+echo '{
+  "obj": '.$tab.',
+  "success": true
+}';
 ?>

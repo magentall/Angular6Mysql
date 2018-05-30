@@ -38,12 +38,12 @@ import { DashComponent } from './dash/dash.component'
     HttpClientModule,
     RouterModule.forRoot([
       {
-        path:'data',
-        component: DataComponent
-      },
-      {
         path:'',
         component:HomeComponent
+      },
+      {
+        path:'data',
+        component: DataComponent
       },
       {
         path:'login',
