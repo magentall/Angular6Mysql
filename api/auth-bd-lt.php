@@ -21,26 +21,26 @@ if (isset($_POST)&& !empty($_POST)&&$_POST['password']!=""){
     $_SESSION['user'] = $username;
 
     ?>
-{
-  "success": true,
-  "secret": "secret admin"
-}
+              {
+                "success": true,
+                "secret": "secret admin"
+              }
    <?php
- }else{
+   }else{
    ?>
-{
-  "success": false,
-  "message": "Votre saisie est incorrecte."
-}
+              {
+                "success": false,
+                "message": "Votre saisie est incorrecte."
+              }
    <?php
  }
 } else {
   //var_dump($_POST);
   ?>
-{
-  "success": false,
-  "message": "Votre saisie est incorrecte!"
-}
+              {
+                "success": false,
+                "message": "Votre saisie est incorrecte!"
+              }
   <?php
 }
 ?>

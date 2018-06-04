@@ -14,6 +14,11 @@ interface myData2 {
   success: boolean
 }
 
+interface ok {
+  success: boolean,
+  message: string
+}
+
 interface isLoggedIn {
   status: boolean
 }
@@ -43,8 +48,8 @@ export class UserService {
     return this.http.get<myData2>('/api/listprets.php')
   }
 
-  ajoutAdherent(noms,alias,key) {
-    return this.http.get<myData2>('/api/addad.php')
+  ajoutAdherent(alias,key,noms) {
+    return this.http.get<ok>('/api/addad.php', {alias,key,noms})
   }
 
   getListCat() {

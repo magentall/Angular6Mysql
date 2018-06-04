@@ -18,7 +18,9 @@ import { AdminComponent } from './admin/admin.component'
 import { AuthGuard } from './auth.guard'
 import { UserService } from './user.service';
 import { LogoutComponent } from './logout/logout.component';
-import { DashComponent } from './dash/dash.component'
+import { DashComponent } from './dash/dash.component';
+import { AdherentComponent } from './adherent/adherent.component';
+import { PretComponent } from './pret/pret.component'
 
 
 @NgModule({
@@ -30,7 +32,9 @@ import { DashComponent } from './dash/dash.component'
     LoginComponent,
     AdminComponent,
     LogoutComponent,
-    DashComponent
+    DashComponent,
+    AdherentComponent,
+    PretComponent
   ],
   imports: [
     BrowserModule,
