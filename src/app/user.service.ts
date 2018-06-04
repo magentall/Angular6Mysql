@@ -27,8 +27,16 @@ interface logoutStatus {
   success: boolean
 }
 
+interface addad {
+  alias : string,
+  key : string,
+  noms : string
+}
+
 @Injectable()
 export class UserService {
+
+
 
   constructor(private http: HttpClient) { }
 
@@ -48,8 +56,8 @@ export class UserService {
     return this.http.get<myData2>('/api/listprets.php')
   }
 
-  ajoutAdherent(alias,key,noms) {
-    return this.http.get<ok>('/api/addad.php', {alias,key,noms})
+  ajoutAdherent(alias,pswd,noms) {
+    return this.http.post<ok>('/api/addad.php', {alias,pswd,noms})
   }
 
   getListCat() {

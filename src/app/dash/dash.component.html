@@ -1,10 +1,15 @@
-<h3>
+<h2>
   DashBoard  <a routerLink="/logout">Logout</a>
-</h3>
-
+</h2>
+<div class="row">
+<div class="col-6">
 <app-pret></app-pret>
-
-<h4>Depuis le mois dernier au mois suivant</h4>
+</div>
+<div class="col-6">
+  <app-adherent></app-adherent>
+</div>
+</div>
+<h3 class="mt-5">Depuis le mois dernier au mois suivant</h3>
 <table class="table table-striped">
   <thead>
     <tr>
@@ -23,5 +28,3 @@
     </tr>
   </tbody>
 </table>
-
-<app-adherent></app-adherent>

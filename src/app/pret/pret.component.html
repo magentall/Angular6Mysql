@@ -1,3 +1,46 @@
-<p>
-  Ici l'ajout de prêt soon
-</p>
+<h3 class="mt-4">
+  Ajouter un prêt
+</h3>
+<form>
+  <div class="form-row">
+    <div class="col-md-6 mb-3">
+      <label for="seljeu">Jeu</label>
+      <select class="custom-select custom-select-sm" id="seljeu">
+        <option selected>Choix</option>
+        <option value="1">One</option>
+        <option value="2">Two</option>
+        <option value="3">Three</option>
+      </select>
+    </div>
+    <div class="col-md-6 mb-3">
+      <label for="seladh">Adhérent</label>
+      <select class="custom-select custom-select-sm" id="seladh">
+        <option selected>Choix</option>
+        <option value="1">One</option>
+        <option value="2">Two</option>
+        <option value="3">Three</option>
+      </select>
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="col-md-4 mb-3">
+      <label for="date_pret">date de prêt</label>
+      <input type="date" class="form-control" id="date_pret">
+    </div>
+    <div class="col-md-4 mb-3">
+      <label for="date_retour">date de retour</label>
+      <input type="date" class="form-control" id="date_retour">
+    </div>
+    <div class="col-md-4 mb-3">
+      <label for="selprix">Prix</label>
+      <select class="custom-select custom-select-sm" id="selprix">
+        <option selected>Choix</option>
+        <option value="1">One</option>
+        <option value="2">Two</option>
+        <option value="3">Three</option>
+      </select>
+    </div>
+  </div>
+
+  <button class="btn btn-primary" type="submit">Enregistrer</button>
+</form>

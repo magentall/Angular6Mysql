@@ -2,7 +2,7 @@
 
 include 'inc/req.php';
 
-session_start();
+//session_start();
 
 $_POST = json_decode(file_get_contents('php://input'), true);
 if (isset($_POST)&& !empty($_POST)){
@@ -10,23 +10,25 @@ if (isset($_POST)&& !empty($_POST)){
   $key = $_POST['pswd'];
   $noms = $_POST['noms'];
 
+  $id=rand();
 
+  $sql = "INSERT INTO adherents (num_adherent, noms_adherent, alias, key_ad) VALUES ('$id', '$noms', '$username', '$key')";
 
-    $result = true;//req("INSERT INTO adherents (num_adherent, noms_adherent, alias, key_ad) VALUES ($id, $noms, $username, $key)");
+    $result = req($sql);
     if($result){
 
 
     ?>
               {
                 "success": true,
-                "message": "Existe déjà"
+                "message": "Adhérent enregistré"
               }
    <?php
    }else{
    ?>
               {
                 "success": false,
-                "message": "Votre saisie est incorrecte."
+                "message": "Existe déjà."
               }
    <?php
    }
