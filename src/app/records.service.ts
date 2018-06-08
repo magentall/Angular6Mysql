@@ -5,16 +5,30 @@ interface myData {
   obj: Array<Object>
 }
 
+interface ok {
+  success: boolean,
+  message: string
+}
+
 @Injectable()
 export class RecordsService {
 
   constructor(private http: HttpClient) { }
 
   getData() {
-  // return this.http.get<myData>('api/file.php')
 	   return this.http.get<myData>('api/tabdispo.php')
-    //return this.http.get<myData>('stz/trash/temp/0024htm/tabSkillz.php')
+  }
 
+  getListAdhe() {
+    return this.http.get<myData>('api/listadhe.php')
+  }
+
+  getListPrix() {
+    return this.http.get<myData>('api/listprix.php')
+  }
+
+  recPret(jeu,adh,date_pret,date_retour,prix) {
+    return this.http.post<ok>('/api/addpret.php', {jeu,adh,date_pret,date_retour,prix})
   }
 
 }

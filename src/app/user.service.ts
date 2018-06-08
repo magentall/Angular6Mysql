@@ -40,9 +40,12 @@ export class UserService {
 
   constructor(private http: HttpClient) { }
 
+// jeux prêtés pour un adhérent donné
   getSomeData() {
     return this.http.get<myData>('/api/database.php')
   }
+//
+
 
   isLoggedIn(): Observable<isLoggedIn> {
     return this.http.get<isLoggedIn>('/api/isloggedin.php')
